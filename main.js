@@ -60,3 +60,12 @@ function animate() {
 }
 
 animate()
+
+const portraitTexture = new THREE.TextureLoader().load('jeff.png')
+
+const portrait = new THREE.Mesh(
+  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.MeshBasicMaterial({ map: portraitTexture })
+)
+
+scene.add(portrait)
