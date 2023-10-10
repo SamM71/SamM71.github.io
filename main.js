@@ -101,9 +101,9 @@ function moveCamera() {
   portrait.rotation.y += 0.01
   portrait.rotation.z += 0.01
 
-  earth.rotation.x += 0.05
-  earth.rotation.y += 0.075
-  earth.rotation.z += 0.05
+  // earth.rotation.x += 0.01
+  earth.rotation.y += 0.04
+  earth.rotation.z += 0.01
 
   camera.position.z = t * -0.01
   camera.position.x = t * -0.0002
