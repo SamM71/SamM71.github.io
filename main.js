@@ -60,24 +60,36 @@ const portrait = new THREE.Mesh(
 
 scene.add(portrait)
 
+portrait.position.setZ(-5)
+portrait.position.setX(2)
+
 const moonTexture = new THREE.TextureLoader().load('moon.jpg')
 const normalTexture = new THREE.TextureLoader().load('normal.jpg')
 
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.SphereGeometry(1, 32, 32),
   new THREE.MeshStandardMaterial({
     map: moonTexture,
     normalMap: normalTexture // not working
   })
 )
 
-scene.add(moon)
+// scene.add(moon)
 
-moon.position.setZ(30)
-moon.position.setX(-10)
+moon.position.setZ(27)
+moon.position.setX(-7)
+moon.position.setY(2)
 
-portrait.position.setZ(-5)
-portrait.position.setX(2)
+const earthTexture = new THREE.TextureLoader().load('earth.jpg')
+const earth = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: earthTexture
+  })
+)
+scene.add(earth)
+earth.position.setZ(30)
+earth.position.setX(-10)
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
@@ -88,6 +100,10 @@ function moveCamera() {
 
   portrait.rotation.y += 0.01
   portrait.rotation.z += 0.01
+
+  earth.rotation.x += 0.05
+  earth.rotation.y += 0.075
+  earth.rotation.z += 0.05
 
   camera.position.z = t * -0.01
   camera.position.x = t * -0.0002
