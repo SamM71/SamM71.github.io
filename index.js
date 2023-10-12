@@ -70,8 +70,8 @@ function addPlanets() {
   earth.position.setX(-10)
   
   scene.add(mars)
-  mars.position.setZ(40)
-  mars.position.setX(-15)
+  mars.position.setZ(45)
+  mars.position.setX(-10)
 
 }
 
