@@ -1,6 +1,7 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { earth, mars } from './planets'
 
 const scene = new THREE.Scene()
 
@@ -63,40 +64,24 @@ scene.add(portrait)
 portrait.position.setZ(-5)
 portrait.position.setX(2)
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg')
-const normalTexture = new THREE.TextureLoader().load('normal.jpg')
+function addPlanets() {
+  scene.add(earth)
+  earth.position.setZ(30)
+  earth.position.setX(-10)
+  
+  scene.add(mars)
+  mars.position.setZ(40)
+  mars.position.setX(-15)
 
-const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(1, 32, 32),
-  new THREE.MeshStandardMaterial({
-    map: moonTexture,
-    normalMap: normalTexture // not working
-  })
-)
+}
 
-// scene.add(moon)
-
-moon.position.setZ(27)
-moon.position.setX(-7)
-moon.position.setY(2)
-
-const earthTexture = new THREE.TextureLoader().load('earth.jpg')
-const earth = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
-  new THREE.MeshStandardMaterial({
-    map: earthTexture
-  })
-)
-scene.add(earth)
-earth.position.setZ(30)
-earth.position.setX(-10)
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
-  moon.rotation.x += 0.05
-  moon.rotation.y += 0.075
-  moon.rotation.z += 0.05
+  // moon.rotation.x += 0.05
+  // moon.rotation.y += 0.075
+  // moon.rotation.z += 0.05
 
   portrait.rotation.y += 0.01
   portrait.rotation.z += 0.01
@@ -105,13 +90,14 @@ function moveCamera() {
   earth.rotation.y += 0.04
   earth.rotation.z += 0.01
 
+  mars.rotation.y += 0.04
+  mars.rotation.z += 0.01
+
   camera.position.z = t * -0.01
   camera.position.x = t * -0.0002
   camera.rotation.y = t * -0.0002
 }
 
-document.body.onscroll = moveCamera
-moveCamera()
 
 function animate() {
   requestAnimationFrame(animate)
@@ -122,4 +108,7 @@ function animate() {
   renderer.render(scene, camera)
 }
 
+addPlanets()
+document.body.onscroll = moveCamera
+moveCamera()
 animate()
