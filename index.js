@@ -1,7 +1,7 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { earth, mars } from './planets'
+import { earth, mars, jupiter, saturn, uranus, neptune } from './planets'
 
 const scene = new THREE.Scene()
 
@@ -71,14 +71,26 @@ function addPlanets() {
   
   scene.add(mars)
   mars.position.setZ(45)
-  mars.position.setX(-10)
+  mars.position.setX(-10.5)
 
+  scene.add(jupiter)
+  jupiter.position.setZ(60)
+  jupiter.position.setX(-11)
+
+  scene.add(saturn)
+  saturn.position.setZ(75)
+  saturn.position.setX(-11.5)
+
+  scene.add(uranus)
+  uranus.position.setZ(90)
+  uranus.position.setX(-12)
+
+  scene.add(neptune)
+  neptune.position.setZ(105)
+  neptune.position.setX(-12.5)
 }
 
-
-function moveCamera() {
-  const t = document.body.getBoundingClientRect().top;
-
+function rotatePlanets() {
   // moon.rotation.x += 0.05
   // moon.rotation.y += 0.075
   // moon.rotation.z += 0.05
@@ -93,9 +105,29 @@ function moveCamera() {
   mars.rotation.y += 0.04
   mars.rotation.z += 0.01
 
+  jupiter.rotation.y += 0.04
+  jupiter.rotation.z += 0.01
+
+  saturn.rotation.y += 0.04
+  saturn.rotation.z += 0.01
+
+  uranus.rotation.y += 0.04
+  uranus.rotation.z += 0.01
+
+  neptune.rotation.y += 0.04
+  neptune.rotation.z += 0.01
+}
+
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
+
+  rotatePlanets()
+
   camera.position.z = t * -0.01
   camera.position.x = t * -0.0002
   camera.rotation.y = t * -0.0002
+  console.log(t)
+  console.log(camera.position)
 }
 
 
