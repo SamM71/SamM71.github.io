@@ -51,7 +51,7 @@ export const mars = new THREE.Mesh(
 
 const jupiterTexture = new THREE.TextureLoader().load('jupiter.jpg')
 export const jupiter = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.SphereGeometry(10, 32, 32),
   new THREE.MeshStandardMaterial({
     map: jupiterTexture
   })
@@ -59,7 +59,7 @@ export const jupiter = new THREE.Mesh(
 
 const saturnTexture = new THREE.TextureLoader().load('saturn.jpg')
 export const saturn = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.SphereGeometry(9, 32, 32),
   new THREE.MeshStandardMaterial({
     map: saturnTexture
   })
@@ -67,7 +67,7 @@ export const saturn = new THREE.Mesh(
 
 const uranusTexture = new THREE.TextureLoader().load('uranus.jpg')
 export const uranus = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.SphereGeometry(6, 32, 32),
   new THREE.MeshStandardMaterial({
     map: uranusTexture
   })
@@ -75,7 +75,7 @@ export const uranus = new THREE.Mesh(
 
 const neptuneTexture = new THREE.TextureLoader().load('neptune.jpg')
 export const neptune = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.SphereGeometry(6, 32, 32),
   new THREE.MeshStandardMaterial({
     map: neptuneTexture
   })
