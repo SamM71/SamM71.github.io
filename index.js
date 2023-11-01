@@ -74,20 +74,20 @@ function addPlanets() {
   mars.position.setX(-10.5)
 
   scene.add(jupiter)
-  jupiter.position.setZ(60)
-  jupiter.position.setX(-11)
+  jupiter.position.setZ(65)
+  jupiter.position.setX(-22)
 
   scene.add(saturn)
-  saturn.position.setZ(75)
-  saturn.position.setX(-11.5)
+  saturn.position.setZ(100)
+  saturn.position.setX(-20)
 
   scene.add(uranus)
-  uranus.position.setZ(90)
-  uranus.position.setX(-12)
+  uranus.position.setZ(130)
+  uranus.position.setX(-16)
 
   scene.add(neptune)
-  neptune.position.setZ(105)
-  neptune.position.setX(-12.5)
+  neptune.position.setZ(150)
+  neptune.position.setX(-15)
 }
 
 function rotatePlanets() {
@@ -105,11 +105,11 @@ function rotatePlanets() {
   mars.rotation.y += 0.04
   mars.rotation.z += 0.01
 
-  jupiter.rotation.y += 0.04
-  jupiter.rotation.z += 0.01
+  jupiter.rotation.y += 0.01
+  jupiter.rotation.z += 0.0025
 
-  saturn.rotation.y += 0.04
-  saturn.rotation.z += 0.01
+  saturn.rotation.y += 0.01
+  saturn.rotation.z += 0.0025
 
   uranus.rotation.y += 0.04
   uranus.rotation.z += 0.01
