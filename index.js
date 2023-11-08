@@ -83,11 +83,11 @@ function addPlanets() {
 
   scene.add(uranus)
   uranus.position.setZ(130)
-  uranus.position.setX(-16)
+  uranus.position.setX(-10)
 
   scene.add(neptune)
-  neptune.position.setZ(150)
-  neptune.position.setX(-15)
+  neptune.position.setZ(160)
+  neptune.position.setX(-8)
 }
 
 function rotatePlanets() {
