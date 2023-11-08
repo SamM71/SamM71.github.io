@@ -75,11 +75,11 @@ function addPlanets() {
 
   scene.add(jupiter)
   jupiter.position.setZ(65)
-  jupiter.position.setX(-22)
+  jupiter.position.setX(-24)
 
   scene.add(saturn)
   saturn.position.setZ(100)
-  saturn.position.setX(-20)
+  saturn.position.setX(-24.5)
 
   scene.add(uranus)
   uranus.position.setZ(130)
