@@ -90,3 +90,8 @@ img {
   display: flex;
   justify-content: space-around;
 }
+
+.gif {
+  max-width: 65%;
+  min-width: 65%;
+}
